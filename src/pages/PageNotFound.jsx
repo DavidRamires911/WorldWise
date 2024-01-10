@@ -1,10 +1,7 @@
-import React from 'react'
-import PageNav from '../components/PageNav'
-
-const PageNoteFound = () => {
+export default function PageNotFound() {
   return (
-    <div> <PageNav />Not Found</div>
-  )
+    <div>
+      <h1>Page not found 😢</h1>
+    </div>
+  );
 }
-
-export default PageNoteFound
