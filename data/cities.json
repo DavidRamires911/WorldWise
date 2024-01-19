@@ -3,7 +3,7 @@
     {
       "cityName": "Lisbon",
       "country": "Portugal",
-      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/32px-Flag_of_Portugal.svg.png",
+      "emoji": "PT",
       "date": "2027-10-31T15:59:59.138Z",
       "notes": "My favorite city so far!",
       "position": {
@@ -15,7 +15,7 @@
     {
       "cityName": "Madrid",
       "country": "Spain",
-      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/32px-Flag_of_Spain.svg.png",
+      "emoji": "ES",
       "date": "2027-07-15T08:22:53.976Z",
       "notes": "",
       "position": {
@@ -27,7 +27,7 @@
     {
       "cityName": "Berlin",
       "country": "Germany",
-      "emoji": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/32px-Flag_of_Germany.svg.png",
+      "emoji": "DE",
       "date": "2027-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
@@ -37,28 +37,28 @@
       "id": 98443197
     },
     {
-      "cityName": "Faro",
-      "country": "Portugal",
-      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/32px-Flag_of_Portugal.svg.png",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
+      "cityName": "Puebla de Don Rodrigo",
+      "country": "Spain",
+      "date": "2024-01-18T16:05:38.528Z",
+      "notes": "",
+      "emoji": "ES",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": "39.06184913429154",
+        "lng": "-4.702148437500001"
       },
-      "id": 739303852
+      "id": 98443198
     },
     {
-      "cityName": "Barcelona",
+      "cityName": "Totana",
       "country": "Spain",
-      "emoji": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/32px-Flag_of_Spain.svg.png",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2024-01-18T16:05:38.528Z",
       "notes": "",
+      "emoji": "ES",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "37.82280243352759",
+        "lng": "-1.6040039062500002"
       },
-      "id": 178067511
+      "id": 98443199
     }
   ]
 }

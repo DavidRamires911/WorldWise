@@ -1,32 +1,42 @@
-import React from "react";
-import styles from "./CityItem.module.css";
-import { countryCodeEmoji } from "emoji-flags";
 import { Link } from "react-router-dom";
+import { useCities } from "../contexts/CitiesContext";
+import styles from "./CityItem.module.css";
+import useFlagEmojiToPng from "../hooks/useFlagEmojiToPng";
 
-const CityItem = ({ city }) => {
-  const { date, cityName, emoji, id, position } = city;
-  console.log(position);
-  const formatDate = (date) =>
-    new Intl.DateTimeFormat("en", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    }).format(new Date(date));
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(date));
+
+function CityItem({ city }) {
+  const { currentCity, deleteCity } = useCities();
+  const { cityName, emoji, date, id, position } = city;
+  const flagEmoji = useFlagEmojiToPng(emoji);
+
+  function handleClick(e) {
+    e.preventDefault();
+    deleteCity(id);
+  }
 
   return (
     <li>
       <Link
-        className={styles.cityItem}
+        className={`${styles.cityItem} ${
+          id === currentCity.id ? styles["cityItem--active"] : ""
+        }`}
         to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
-        <img src={emoji} alt={cityName} width={30} height={20} />
-
-        <h3 className={styles.name}>{cityName} </h3>
-        <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn}>&times; </button>
+        <span className={styles.emoji}><span> {flagEmoji} </span> </span>
+        <h3 className={styles.name}>{cityName}</h3>
+        <time className={styles.date}>({formatDate(date)})</time>
+        <button className={styles.deleteBtn} onClick={handleClick}>
+          &times;
+        </button>
       </Link>
     </li>
   );
-};
+}
 
 export default CityItem;

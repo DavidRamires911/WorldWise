@@ -1,11 +1,12 @@
+import useFlagEmojiToPNG from "../hooks/useFlagEmojiToPng";
 import styles from "./CountryItem.module.css";
 
 function CountryItem({ country }) {
-  console.log("CountryItem - country:", country);
+  const flagEmoji = useFlagEmojiToPNG(country.emoji);
 
   return (
     <li className={styles.countryItem}>
-      <span> <img src={country.emoji} alt="sdasd" /> </span>
+      <span> {flagEmoji} </span>
       <span>{country.country}</span>
     </li>
   );
