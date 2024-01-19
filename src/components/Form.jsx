@@ -12,10 +12,12 @@ import useFlagEmojiToPng from "../hooks/useFlagEmojiToPng";
 import Message from "./Message";
 import Spinner from "./Spinner";
 import { useCities } from "../contexts/CitiesContext";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
   const [lat, lng] = useUrlPosition();
-  const {createCity} = useCities();
+  const {createCity, isLoading} = useCities();
+  const  navigate = useNavigate();
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
@@ -55,7 +57,7 @@ function Form() {
     fetchCityData();
   }, [lat, lng]);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     if (!cityName || !date) return;
     e.preventDefault();
     const newCity = {
@@ -66,7 +68,8 @@ function Form() {
       emoji,
       position: { lat,lng,},
     };
-createCity(newCity);  }
+await createCity(newCity); 
+navigate(`/app/cities`); }
 
   if (isLoadingGeocoding) {
     return <Spinner />;
@@ -76,7 +79,7 @@ createCity(newCity);  }
   if (geoCodingError) return <Message message={geoCodingError} />;
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} ${isLoading ? styles.loading :""} `} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input

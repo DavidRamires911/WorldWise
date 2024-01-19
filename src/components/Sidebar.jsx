@@ -14,7 +14,7 @@ const Sidebar = () => {
     <footer className={styles.footer}>
         <p className={styles.copyright} >
             &copy; Copyright {new Date().getFullYear()}
-            by WorldWise Inc.
+            by TravelTrekker Inc.
         </p>
     </footer>
     </div>

@@ -22,7 +22,7 @@ function reducer(state, action) {
     case "loading":
       return { ...state, isLoading: true };
 
-    case "cities/loaded":
+    case "cities/loaded": // cities/loaded good practice
       return {
         ...state,
         isLoading: false,
@@ -30,7 +30,8 @@ function reducer(state, action) {
       };
 
     case "city/loaded":
-      return { ...state, isLoading: false, currentCity: action.payload };
+      return { ...state, isLoading: false, 
+        currentCity: action.payload };
 
     case "city/created":
       return {
@@ -59,7 +60,7 @@ function reducer(state, action) {
       throw new Error("Unknown action type");
   }
 }
-
+///reducer function
 function CitiesProvider({ children }) {
   const [{ cities, isLoading, currentCity, error }, dispatch] = useReducer(
     reducer,
@@ -93,7 +94,7 @@ function CitiesProvider({ children }) {
       try {
         const res = await fetch(`${BASE_URL}/cities/${id}`);
         const data = await res.json();
-      
+
         dispatch({ type: "city/loaded", payload: data });
       } catch {
         dispatch({
@@ -117,7 +118,7 @@ function CitiesProvider({ children }) {
         },
       });
       const data = await res.json();
-      console.log(data);
+      
 
       dispatch({ type: "city/created", payload: data });
     } catch {

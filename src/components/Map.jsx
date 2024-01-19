@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Map.module.css";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -22,7 +22,7 @@ function Map() {
     isLoading: isLoadingPosition,
     getPosition,
   } = useGeolocation();
-const [mapLat, mapLng] = useUrlPosition();
+  const [mapLat, mapLng] = useUrlPosition();
   useEffect(() => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
@@ -33,9 +33,11 @@ const [mapLat, mapLng] = useUrlPosition();
   }, [geoLocationPosition]);
   return (
     <div className={styles.mapContainer}>
-     {!geoLocationPosition && <Button type="position" onClick={getPosition}>
-        {isLoadingPosition ? "Loading..." : "My Position"}
-      </Button>}
+      {!geoLocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoadingPosition ? "Loading..." : "My Position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         zoom={6}
