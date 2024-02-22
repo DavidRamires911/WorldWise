@@ -1,76 +1,76 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
+      "cityName": "Almodovar",
       "country": "Portugal",
+      "date": "2024-02-04T22:54:12.041Z",
+      "notes": "lunch with friends",
       "emoji": "PT",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": "37.35269280367274",
+        "lng": "-8.150669128441612"
       },
-      "id": 73930385
+      "id": 1
     },
     {
-      "cityName": "Puebla de Don Rodrigo",
+      "cityName": "Epe",
+      "country": "Netherlands (Kingdom of the)",
+      "date": "2024-02-04T22:54:54.431Z",
+      "notes": "visit a friend",
+      "emoji": "NL",
+      "position": {
+        "lat": "52.308478623663355",
+        "lng": "5.937355883900356"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Madrid",
       "country": "Spain",
-      "date": "2024-01-18T16:05:38.528Z",
-      "notes": "",
+      "date": "2024-02-04T23:09:03.850Z",
+      "notes": "food amazing",
       "emoji": "ES",
       "position": {
-        "lat": "39.06184913429154",
-        "lng": "-4.702148437500001"
+        "lat": "40.36328834091583",
+        "lng": "-3.7767842328861687"
       },
-      "id": 98443198
+      "id": 5
     },
     {
-      "cityName": "Totana",
-      "country": "Spain",
-      "date": "2024-01-18T16:05:38.528Z",
-      "notes": "",
-      "emoji": "ES",
+      "cityName": "Toulouse",
+      "country": "France",
+      "date": "2024-02-04T23:09:14.770Z",
+      "notes": "quick stop",
+      "emoji": "FR",
       "position": {
-        "lat": "37.82280243352759",
-        "lng": "-1.6040039062500002"
+        "lat": "43.60426186809618",
+        "lng": "1.4457858519168543"
       },
-      "id": 98443199
+      "id": 6
     },
     {
-      "cityName": "Loule",
-      "country": "Portugal",
-      "date": "2024-01-19T10:59:54.562Z",
-      "notes": "",
-      "emoji": "PT",
+      "cityName": "la Massana",
+      "country": "Andorra",
+      "date": "2024-02-04T23:09:27.236Z",
+      "notes": "...",
+      "emoji": "AD",
       "position": {
-        "lat": "37.17782559332976",
-        "lng": "-7.976074218750001"
+        "lat": "42.53486817758702",
+        "lng": "1.5313109156022622"
       },
-      "id": 98443200
+      "id": 7
     },
     {
-      "cityName": "Loule",
-      "country": "Portugal",
-      "date": "2024-01-19T10:59:54.562Z",
-      "notes": "best",
-      "emoji": "PT",
+      "cityName": "El Houamed",
+      "country": "Algeria",
+      "date": "2024-02-04T23:09:42.154Z",
+      "notes": "beautifull",
+      "emoji": "DZ",
       "position": {
-        "lat": "37.17782559332976",
-        "lng": "-7.976074218750001"
+        "lat": "35.08395557927643",
+        "lng": "4.75072580906927"
       },
-      "id": 98443201
-    },
-    {
-      "cityName": "El Borouj",
-      "country": "Morocco",
-      "date": "2024-01-19T11:34:33.312Z",
-      "notes": "dji",
-      "emoji": "MA",
-      "position": {
-        "lat": "32.657875736955305",
-        "lng": "-7.075195312500001"
-      },
-      "id": 98443202
+      "id": 8
     }
   ]
 }
